@@ -47,7 +47,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer("💡 only admin can tap this button !", show_alert=True)
+            await cb.answer("💡 only admin can tap this button must Join @AXEL_SUPPORT !", show_alert=True)
             return
     return decorator
 
@@ -194,7 +194,7 @@ async def settings(client, message):
             await message.reply(stats, reply_markup=r_ply("play"))
     else:
         await message.reply(
-            "😕 **voice chat not found**\n\n» please turn on the voice chat first"
+            "😕 **voice chat not found Now join @AXEL_SUPPORT **\n\n» please turn on the voice chat first"
         )
 
 
@@ -225,7 +225,7 @@ async def music_onoff(_, message):
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"✅ **music player has been activated in this chat.**\n\n💬 `{message.chat.id}`"
+            f"✅ **music player has been activated in this chat must Join @AXEL_SUPPORT.**\n\n💬 `{message.chat.id}`"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
@@ -236,7 +236,7 @@ async def music_onoff(_, message):
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"✅ **music player has been deactivated in this chat.**\n\n💬 `{message.chat.id}`"
+            f"✅ **music player has been deactivated in this chat must JOIN @AXEL_SUPPORT.**\n\n💬 `{message.chat.id}`"
         )
     else:
         await message.reply_text(
@@ -471,7 +471,7 @@ async def play(_, message: Message):
                         "🤖: i'm joined to this group for playing music on voice chat",
                     )
                     await lel.edit(
-                        f"✅ **userbot successfully joined chat**",
+                        f"✅ **userbot successfully joined chat must JOIN @AXEL_SUPPORT**",
                     )
                 except UserAlreadyParticipant:
                     pass
